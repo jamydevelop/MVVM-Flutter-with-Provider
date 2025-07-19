@@ -1,7 +1,7 @@
 import 'dart:convert';
 
+// JSON utilities
 UserError userErrorFromJson(String str) => UserError.fromJson(json.decode(str));
-
 String userErrorToJson(UserError data) => json.encode(data.toJson());
 
 class UserError {
@@ -10,16 +10,20 @@ class UserError {
     required this.message,
   });
 
-  int code;
-  String message;
+  final int code;
+  final String message;
 
-  factory UserError.fromJson(Map<String, dynamic> json) => UserError(
-        code: json["code"] == null ? null : json["code"],
-        message: json["message"] == null ? null : json["message"],
-      );
+  // Factory constructor for creating from JSON
+  factory UserError.fromJson(Map<String, dynamic> json) {
+    return UserError(
+      code: json["code"] ?? 0, // provide default if null
+      message: json["message"] ?? "Unknown error",
+    );
+  }
 
+  // Convert instance to JSON
   Map<String, dynamic> toJson() => {
-        "code": code == null ? null : code,
-        "message": message == null ? null : message,
+        "code": code,
+        "message": message,
       };
 }

@@ -45,5 +45,4 @@ class UsersViewModel extends ChangeNotifier {
     setUserError(userError);
     }
   }
-
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm_flutter_with_provider/home_screen.dart';
+import 'package:mvvm_flutter_with_provider/users_list/view_models/users_view_model.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-
+        ChangeNotifierProvider(create: (_) => UsersViewModel())
       ],
       child: MaterialApp(
       title: 'MVVM',

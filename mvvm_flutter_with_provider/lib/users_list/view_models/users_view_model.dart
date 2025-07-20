@@ -15,11 +15,13 @@ class UsersViewModel extends ChangeNotifier {
   bool _loading = false;
   List<UserModel> _userListModel = [];
   UserError? _userError;
+  UserModel? _selectedUser;
 
   //getters
   bool get loading => _loading;
   List<UserModel> get userListModel => _userListModel;
   UserError? get userError => _userError;
+  UserModel? get selectedUser => _selectedUser;
 
   //setters
   setLoading(bool loading) async {
@@ -35,6 +37,11 @@ class UsersViewModel extends ChangeNotifier {
 
   setUserError (UserError userError) {
     _userError = userError;
+  }
+
+  setSelectedUser(UserModel usermodel) {
+    _selectedUser = usermodel;
+    notifyListeners();
   }
 
   //Method

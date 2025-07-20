@@ -51,6 +51,7 @@ class HomeScreen extends StatelessWidget {
           UserModel userModel = usersViewModel.userListModel[index];
           return UserListRow(userModel: userModel, onTap: () {
             //
+            usersViewModel.setSelectedUser(userModel);
             openUserDetails(context);
           });
         },

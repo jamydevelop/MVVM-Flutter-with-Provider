@@ -16,6 +16,7 @@ class UsersViewModel extends ChangeNotifier {
   List<UserModel> get userListModel => _userListModel;
   UserError? get userError => _userError;
 
+  //setters
   setLoading(bool loading) async {
     _loading = loading;
     notifyListeners(); // this will notify the UI, saying there's a new value

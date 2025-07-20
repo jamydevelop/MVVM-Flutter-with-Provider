@@ -11,7 +11,19 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(),
-      body: Container(),
+      body: Container(
+        child: _ui(usersViewModel)
+      ),
     );
+  }
+
+  _ui(UsersViewModel usersViewModel) {
+    if(usersViewModel.loading) {
+      Container();
+    }
+
+    if(usersViewModel.userError != null) {
+      return Container();
+    }
   }
 }

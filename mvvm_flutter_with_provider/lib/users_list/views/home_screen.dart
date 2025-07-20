@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm_flutter_with_provider/components/app_loading.dart';
-import 'package:mvvm_flutter_with_provider/components/app_title.dart';
 import 'package:mvvm_flutter_with_provider/components/user_list_row.dart';
 import 'package:mvvm_flutter_with_provider/users_list/models/users_list_model.dart';
 import 'package:mvvm_flutter_with_provider/users_list/view_models/users_view_model.dart';

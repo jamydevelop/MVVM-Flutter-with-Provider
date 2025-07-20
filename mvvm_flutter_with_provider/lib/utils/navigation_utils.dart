@@ -7,3 +7,10 @@ openUserDetails (BuildContext context) async {
     MaterialPageRoute(builder: (context) => UserDetailsScreen())
   );
 }
+
+// openAddUser(BuildContext context) async {
+//   Navigator.push(
+//     context,
+//     MaterialPageRoute(builder: (context) => AddUserScreen())
+//   );
+// }

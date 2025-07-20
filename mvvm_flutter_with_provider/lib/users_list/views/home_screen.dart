@@ -24,6 +24,15 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: (){
+              //
+            },
+            icon: Icon(Icons.add),
+            color: Colors.white,
+          )
+        ],
       ),
       body: Container(
          padding: EdgeInsets.all(20),

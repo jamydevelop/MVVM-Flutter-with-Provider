@@ -6,6 +6,11 @@ import 'package:mvvm_flutter_with_provider/users_list/repo/user_services.dart';
 
 class UsersViewModel extends ChangeNotifier {
 
+  //constructor to call the getUsers() method
+  UsersViewModel() {
+    getUsers();
+  }
+
   //Declaration
   bool _loading = false;
   List<UserModel> _userListModel = [];

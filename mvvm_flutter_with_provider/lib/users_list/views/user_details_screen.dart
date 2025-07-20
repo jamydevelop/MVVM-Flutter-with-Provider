@@ -25,7 +25,7 @@ class UserDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppTitle(title: usersViewModel.selectedUser!.name),
-            Text(usersViewModel.selectedUser!.email)
+            Text(usersViewModel.selectedUser!.email!)
           ],
         ),
       ),

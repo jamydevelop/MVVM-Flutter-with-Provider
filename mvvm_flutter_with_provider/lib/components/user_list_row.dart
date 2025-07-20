@@ -19,7 +19,7 @@ class UserListRow extends StatelessWidget {
               children: [
                 AppTitle(title: userModel.name,),
                 Text(
-                  userModel.email,
+                  userModel.email!,
                   style: TextStyle(color: Colors.black),
                 ),
               ],

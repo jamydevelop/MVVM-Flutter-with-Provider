@@ -9,24 +9,24 @@ List<UserModel> usersListModelFromJson(String str) => List<UserModel>.from(json.
 String usersListModelToJson(List<UserModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class UserModel {
-    final int id;
-    final String name;
-    final String username;
-    final String email;
-    final Address address;
-    final String phone;
-    final String website;
-    final Company company;
+    final int? id;
+    final String? name;
+    final String? username;
+    final String? email;
+    final Address? address;
+    final String? phone;
+    final String? website;
+    final Company? company;
 
     UserModel({
-        required this.id,
-        required this.name,
-        required this.username,
-        required this.email,
-        required this.address,
-        required this.phone,
-        required this.website,
-        required this.company,
+         this.id,
+         this.name,
+         this.username,
+         this.email,
+         this.address,
+         this.phone,
+         this.website,
+         this.company,
     });
 
     UserModel copyWith({
@@ -66,10 +66,10 @@ class UserModel {
         "name": name,
         "username": username,
         "email": email,
-        "address": address.toJson(),
+        "address": address!.toJson(),
         "phone": phone,
         "website": website,
-        "company": company.toJson(),
+        "company": company!.toJson(),
     };
 }
 

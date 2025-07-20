@@ -37,6 +37,7 @@ class UsersViewModel extends ChangeNotifier {
     _userError = userError;
   }
 
+  //Method
   getUsers() async {
     setLoading(true);
     var response = await UserServices.getUsers();

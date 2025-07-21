@@ -11,20 +11,18 @@ class UserListRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        //color: Colors.amber[200],
-        child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AppTitle(title: userModel.name,),
-                Text(
-                  userModel.email!,
-                  style: TextStyle(color: Colors.black),
-                ),
-              ],
-            ),
-      ),
+      child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              AppTitle(title: userModel.name,),
+              Text(
+                userModel.email!,
+                style: TextStyle(color: Colors.black),
+              ),
+            ],
+
+          ),
     );
   }
 }

@@ -16,7 +16,7 @@ class UsersViewModel extends ChangeNotifier {
   List<UserModel> _userListModel = [];
   UserError? _userError;
   UserModel? _selectedUser;
-  final UserModel? _addedUser = UserModel();
+  final UserModel _addedUser = UserModel();
 
   //getters
   bool get loading => _loading;

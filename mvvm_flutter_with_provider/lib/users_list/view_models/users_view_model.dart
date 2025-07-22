@@ -11,21 +11,21 @@ class UsersViewModel extends ChangeNotifier {
     getUsers();
   }
 
-  //Declaration
+  //Declaration-----------------------------------------------------------------
   bool _loading = false;
   List<UserModel> _userListModel = [];
   UserError? _userError;
   UserModel? _selectedUser;
   final UserModel _addedUser = UserModel();
 
-  //getters
+  //getters---------------------------------------------------------------------
   bool get loading => _loading;
   List<UserModel> get userListModel => _userListModel;
   UserError? get userError => _userError;
   UserModel? get selectedUser => _selectedUser;
   UserModel get addedUser => _addedUser;
 
-  //setters
+  //setters---------------------------------------------------------------------
   setLoading(bool loading) async {
     _loading = loading;
     notifyListeners(); // this will notify the UI, saying there's a new value
@@ -46,7 +46,7 @@ class UsersViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  //Method
+  //Method----------------------------------------------------------------------
   getUsers() async {
     setLoading(true);
     var response = await UserServices.getUsers();

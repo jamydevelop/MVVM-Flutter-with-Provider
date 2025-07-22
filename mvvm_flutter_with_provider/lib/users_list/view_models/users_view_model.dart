@@ -16,14 +16,14 @@ class UsersViewModel extends ChangeNotifier {
   List<UserModel> _userListModel = [];
   UserError? _userError;
   UserModel? _selectedUser;
-  final UserModel _addedUser = UserModel();
+  UserModel _addingUser = UserModel();
 
   //getters---------------------------------------------------------------------
   bool get loading => _loading;
   List<UserModel> get userListModel => _userListModel;
   UserError? get userError => _userError;
   UserModel? get selectedUser => _selectedUser;
-  UserModel get addedUser => _addedUser;
+  UserModel get addingUser => _addingUser;
 
   //setters---------------------------------------------------------------------
   setLoading(bool loading) async {
@@ -47,6 +47,26 @@ class UsersViewModel extends ChangeNotifier {
   }
 
   //Method----------------------------------------------------------------------
+    addUser() async {
+    if (!isValid()) {
+      return;
+    }
+    _userListModel.add(addingUser);
+    _addingUser = UserModel();
+    notifyListeners();
+    return true;
+  }
+
+  isValid() {
+    if (addingUser.name == null || addingUser.name!.isEmpty) {
+      return false;
+    }
+    if (addingUser.email == null || addingUser.email!.isEmpty) {
+      return false;
+    }
+    return true;
+  }
+
   getUsers() async {
     setLoading(true);
     var response = await UserServices.getUsers();

@@ -9,14 +9,14 @@ List<UserModel> usersListModelFromJson(String str) => List<UserModel>.from(json.
 String usersListModelToJson(List<UserModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class UserModel {
-    final int? id;
-    final String? name;
-    final String? username;
-    final String? email;
-    final Address? address;
-    final String? phone;
-    final String? website;
-    final Company? company;
+     int? id;
+     String? name;
+     String? username;
+     String? email;
+     Address? address;
+     String? phone;
+     String? website;
+     Company? company;
 
     UserModel({
          this.id,

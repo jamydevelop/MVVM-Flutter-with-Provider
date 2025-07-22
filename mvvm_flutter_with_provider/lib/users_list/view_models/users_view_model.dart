@@ -23,7 +23,7 @@ class UsersViewModel extends ChangeNotifier {
   List<UserModel> get userListModel => _userListModel;
   UserError? get userError => _userError;
   UserModel? get selectedUser => _selectedUser;
-  UserModel? get addedUser => _addedUser;
+  UserModel get addedUser => _addedUser;
 
   //setters
   setLoading(bool loading) async {

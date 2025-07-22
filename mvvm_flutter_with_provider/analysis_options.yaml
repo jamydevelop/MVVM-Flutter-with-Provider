@@ -11,6 +11,7 @@ analyzer:
   errors:
     dead_code_on_catch_subtype: ignore
     constant_identifier_names: ignore
+    avoid_print: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:

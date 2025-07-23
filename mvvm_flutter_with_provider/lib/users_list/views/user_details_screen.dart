@@ -15,7 +15,7 @@ class UserDetailsScreen extends StatelessWidget {
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: Colors.blue,
-        title: AppTitle(title: usersViewModel.selectedUser!.name),
+        title: AppTitle(title: 'User Detail Screen'),
         centerTitle: true,
       ),
       body: Container(
@@ -25,7 +25,14 @@ class UserDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AppTitle(title: usersViewModel.selectedUser!.name),
-            Text(usersViewModel.selectedUser!.email!)
+            Text(usersViewModel.selectedUser!.email!),
+            Text(usersViewModel.selectedUser!.phone!),
+            Text(usersViewModel.selectedUser!.username!),
+            Text(usersViewModel.selectedUser!.id!.toString()),
+            Text(usersViewModel.selectedUser!.company!.toString()),
+
+
+
           ],
         ),
       ),

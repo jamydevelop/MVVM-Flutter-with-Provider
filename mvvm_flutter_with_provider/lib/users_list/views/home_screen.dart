@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(
-          'Users',
+          'Home Screen',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold

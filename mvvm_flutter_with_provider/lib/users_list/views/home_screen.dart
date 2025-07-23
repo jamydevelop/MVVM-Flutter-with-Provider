@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_flutter_with_provider/components/app_error.dart';
 import 'package:mvvm_flutter_with_provider/components/app_loading.dart';
 import 'package:mvvm_flutter_with_provider/components/user_list_row.dart';
 import 'package:mvvm_flutter_with_provider/users_list/models/users_list_model.dart';
@@ -51,7 +52,7 @@ class HomeScreen extends StatelessWidget {
     }
 
     if(usersViewModel.userError != null) {
-      return Container();
+      return AppError(errortxt: usersViewModel.userError.toString());
     }
 
     return Expanded(

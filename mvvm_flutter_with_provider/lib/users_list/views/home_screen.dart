@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
     }
 
     if(usersViewModel.userError != null) {
-      return AppError(errortxt: usersViewModel.userError.toString());
+      return AppError(errortxt: usersViewModel.userError!.message.toString());
     }
 
     return Expanded(

@@ -19,7 +19,7 @@ class UserServices {
 
       var response = await http.get(url, headers: headers);
 
-      if (response.statusCode == 200) {
+      if (SUCCESS == response.statusCode) {
         return Success(response: usersListModelFromJson(response.body));
       }
 

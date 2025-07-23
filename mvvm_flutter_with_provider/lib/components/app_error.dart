@@ -7,8 +7,9 @@ class AppError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: errortxt.isNotEmpty,
+      visible: null != errortxt && errortxt.isNotEmpty,
       child: Container(
+        alignment: Alignment.center,
         padding: EdgeInsets.all(18),
         child: Text(
           errortxt,

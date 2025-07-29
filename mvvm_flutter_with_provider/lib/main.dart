@@ -10,15 +10,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
+    //Root widget is wrap by the ChangeNotifierProvider
     return ChangeNotifierProvider(
       create: (context) => CounterProvider(),
-      child:  MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomePage(),
-      ),
+      child: MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()),
     );
   }
 }
